@@ -1,6 +1,6 @@
 {
     "require": {
-        "docusign/esign-client": "^3.0.1",
+        "docusign/esign-client": "^5.0.0",
         "firebase/php-jwt": "^5.0",
         "mashape/unirest-php": "^3.0",
         "ext-json": "*"
