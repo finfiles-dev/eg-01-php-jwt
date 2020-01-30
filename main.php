@@ -6,7 +6,7 @@
     include_once 'lib/send_envelope.php';
     include_once 'lib/list_envelopes.php';
     $config = new DocuSign\eSign\Configuration();
-    $apiClient = new DocuSign\eSign\ApiClient($config);
+    $apiClient = new DocuSign\eSign\Client\ApiClient($config);
 
     try {
         print("\nSending an envelope...\n");
@@ -34,7 +34,7 @@
         print ("\n\nException!\n");
         print ($e->getMessage());
 
-        if ($e instanceof DocuSign\eSign\ApiException) {
+        if ($e instanceof DocuSign\eSign\Client\ApiException) {
             print ("\nAPI error information: \n");
             print ($e->getResponseObject());
         }
